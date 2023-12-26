@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--in ra hello 1000 lân-->
+<script>
+    for (let dem=0; dem<=1000; dem=dem+1){
+        document.write('hello<br>')
+    }
+</script>
+<!--in ra các số từ 1 đến 100-->
+<script>
+    for (let dem=1; dem<=100; dem=dem+1) {
+        document.write(dem+'<br>')
+    }
+</script>
+<!--in ra các số từ a->b, a và b nhập từ prompt-->
+<script>
+    let a = +prompt('nhập số a: ')
+    let b = +prompt('nhập số b ')
+    for (let dem=a; dem<=b; dem=dem+1) {
+        document.write(dem + '<br>')
+    }
+</script>
+<!--in ra tổng các số từ a đến b-->
+<script>
+    let a = +prompt('nhập số a: ')
+    let b = +prompt('nhập số b ')
+    let tong = 0
+    for (let x=a; x<=b; x++) {
+        tong = tong+x
+    }
+    document.write(tong)
+</script>
+<!--in ra các tích số từ a đên b-->
+<script>
+    let a = +prompt('nhập số a: ')
+    let b = +prompt('nhập số b ')
+    let tich = 1
+    for (let x=a; x<=b; x++) {
+        tich = tich+x
+    }
+    document.write(tich)
+</script>
+<!-- In ra tổng của bình phương các số từ a - b:  1-5 => 1+ 4+ 9 + 16 + 25-->
+<script>
+    let a = +prompt('nhập số a: ')
+    let b = +prompt('nhập số b ')
+    let tong = 0
+    for (let x=a; x<=b; x++) {
+        tong = tong+x*x
+    }
+    document.write(tong)
+</script>
+<!-- In ra số lượng số chia hết cho 5 từ a - b: 1 -> 25 => "5": 5, 10, 15 ,20, 25-->
+<script>
+    let a = +prompt('nhập số a: ')
+    let b = +prompt('nhập số b ')
+    let dem = 0
+    for (let x=a; x<=b; x++) {
+        if(x%5===0){
+            dem++;
+        }
+    }
+    alert(dem)
+</script>
+<!-- In ra trung bình cộng các số chia hết cho 6 từ a -> b-->
+<script>
+    let a = +prompt('nhập số a: ')
+    let b = +prompt('nhập số b ')
+    let dem = 0
+    let tong = 0
+    for (let x=a; x<=b; x++) {
+        if(x%6===0){
+            dem++;
+            tong += x;
+        }
+    }
+    alert(tong/dem)
+</script>
+<!-- Hãy viết một chương trình in ra các số từ 1 đến 100-->
+<!-- Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó-->
+<!-- Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz"-->
+<script>
+    for (let e=1; e<=100; e++){
+        if(e%15==0){
+            document.write('FizzBuzz');
+        }
+        else if (e%5==0){
+            document.write('Buzz');
+        }
+        else if (e%3==0){
+            document.write('Fizz');
+        }
+        else document.write(e);
+        document.write('<br>')
+    }
+</script>
+</body>
+</html>
